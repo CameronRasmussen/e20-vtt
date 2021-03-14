@@ -449,24 +449,19 @@ DND5E.senses = {
  * @type {Object}
  */
 DND5E.skills = {
-  "acr": "DND5E.SkillAcr",
-  "ani": "DND5E.SkillAni",
-  "arc": "DND5E.SkillArc",
-  "ath": "DND5E.SkillAth",
-  "dec": "DND5E.SkillDec",
-  "his": "DND5E.SkillHis",
-  "ins": "DND5E.SkillIns",
-  "itm": "DND5E.SkillItm",
-  "inv": "DND5E.SkillInv",
-  "med": "DND5E.SkillMed",
-  "nat": "DND5E.SkillNat",
-  "prc": "DND5E.SkillPrc",
-  "prf": "DND5E.SkillPrf",
-  "per": "DND5E.SkillPer",
-  "rel": "DND5E.SkillRel",
-  "slt": "DND5E.SkillSlt",
-  "ste": "DND5E.SkillSte",
-  "sur": "DND5E.SkillSur"
+  "acr": "DND5E.SkillAcr",  // Acrobatics
+  "ath": "DND5E.SkillAth",  // Athletics
+  "fin": "DND5E.SkillFin",  // Finesse
+  "inf": "DND5E.SkillInf",  // Influence
+  "nat": "DND5E.SkillNat",  // Nature
+  "per": "DND5E.SkillPer",  // Perception
+  "prf": "DND5E.SkillPrf",  // Performance
+  // Profession
+  "rel": "DND5E.SkillRel",  // Religion
+  "soc": "DND5E.SkillSoc",  // Society
+  "spe": "DND5E.SkillSpe",  // Spellcraft
+  "ste": "DND5E.SkillSte",  // Stealth
+  "sur": "DND5E.SkillSur"   // Survival
 };
 
 
@@ -650,9 +645,9 @@ DND5E.polymorphSettings = {
  */
 DND5E.proficiencyLevels = {
   0: "DND5E.NotProficient",
-  1: "DND5E.Proficient",
-  0.5: "DND5E.HalfProficient",
-  2: "DND5E.Expertise"
+  0: "DND5E.Proficient",
+  0: "DND5E.HalfProficient",
+  0: "DND5E.Expertise"
 };
 
 /* -------------------------------------------- */
@@ -777,7 +772,7 @@ DND5E.characterFlags = {
   "observantFeat": {
     name: "DND5E.FlagsObservant",
     hint: "DND5E.FlagsObservantHint",
-    skills: ['prc','inv'],
+    skills: ['prc'],
     section: "Feats",
     type: Boolean
   },
