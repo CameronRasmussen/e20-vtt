@@ -945,7 +945,7 @@ export default class Item5e extends Item {
 
     // Scale melee critical hit damage
     if ( itemData.actionType === "mwak" ) {
-      rollConfig.criticalBonusDice = this.actor.getFlag("dnd5e", "meleeCriticalDamageDice") ?? 0;
+      rollConfig.criticalBonusDice = this.actor.getFlag("e20-vtt", "meleeCriticalDamageDice") ?? 0;
     }
 
     // Call the roll helper utility
@@ -1099,8 +1099,8 @@ export default class Item5e extends Item {
         top: options.event ? options.event.clientY - 80 : null,
         left: window.innerWidth - 710,
       },
-      halflingLucky: this.actor.getFlag("dnd5e", "halflingLucky" ) || false,
-      reliableTalent: (this.data.data.proficient >= 1) && this.actor.getFlag("dnd5e", "reliableTalent"),
+      halflingLucky: this.actor.getFlag("e20-vtt", "halflingLucky" ) || false,
+      reliableTalent: (this.data.data.proficient >= 1) && this.actor.getFlag("e20-vtt", "reliableTalent"),
       messageData: {"flags.dnd5e.roll": {type: "tool", itemId: this.id }}
     }, options);
     rollConfig.event = options.event;
@@ -1170,7 +1170,7 @@ export default class Item5e extends Item {
     if ( !actor ) return;
 
     // Get the Item from stored flag data or by the item ID on the Actor
-    const storedData = message.getFlag("dnd5e", "itemData");
+    const storedData = message.getFlag("e20-vtt", "itemData");
     const item = storedData ? this.createOwned(storedData, actor) : actor.getOwnedItem(card.dataset.itemId);
     if ( !item ) {
       return ui.notifications.error(game.i18n.format("DND5E.ActionWarningNoItem", {item: card.dataset.itemId, name: actor.name}))
