@@ -1,5 +1,5 @@
 {
-  "name": "e20",
+  "name": "e20-vtt",
   "title": "E20 - A modified DnD5e game",
   "description": "A system for playing a game in the Foundry Virtual Tabletop environment.",
   "version": "1.0",
@@ -95,5 +95,5 @@
   "compatibleCoreVersion": "0.7.9",
   "url": "https://github.com/CameronRasmussen/e20-vtt",
   "manifest": "https://raw.githubusercontent.com/CameronRasmussen/e20-vtt/master/system.json",
-  "download": ""
+  "download": "https://github.com/CameronRasmussen/e20-vtt/releases/download/1.0/e20-vtt.zip?raw=true"
 }
